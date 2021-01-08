@@ -1,0 +1,23 @@
+[package]
+name = "field_names"
+version = "0.1.0"
+authors = ["Ted Driggs <ted.driggs@outlook.com>"]
+edition = "2018"
+repository = "https://github.com/TedDriggs/field_names"
+documentation = "https://docs.rs/field_names/0.12.0"
+description = """
+A proc-macro for exposing a struct's field names at runtime.
+"""
+license = "MIT"
+readme = "README.md"
+exclude = ["/publish.sh", "/.github/**"]
+
+
+[dependencies]
+darling = "0.12.0"
+proc-macro2 = "1"
+quote = "1.0.8"
+syn = { version = "1.0.57", features = ["full"] }
+
+[lib]
+proc-macro = true
