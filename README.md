@@ -61,6 +61,9 @@ This crate was originally created for a case where a set of rules were being rea
 The referenced struct exposed a method which had a `match` statement to go from strings to its fields, but there was not a way to ensure the arms of that match statement stayed in sync with the struct definition.
 With this crate, a unit test could be created to ensure that every field on the struct - except those deliberately omitted - was handled by the method.
 
+This crate can also be used to enforce relationships among structs and enums at unit-test time that cannot be expressed at compile-time.
+See `tests/keep_in_sync` for an example and explanation of that scenario.
+
 # FAQs
 
 ### Why aren't `FieldNames` and `VariantNames` traits?
